@@ -10,13 +10,12 @@ cd $(dirname "$0")
 git update-index --assume-unchanged include/app_config.h | true
 git update-index --assume-unchanged include/wifi_config.h | true
 
-# make packages for Arduino IDE
+# make the packages for Arduino IDE
 if [[ "$1" == "arduino-ide" ]]; then
   pushd ..
-  cp -r src esp-sensors-demo
-  cp lib/iotc-arduino-sdk/include/* esp-sensors-demo/
-  cp lib/iotc-arduino-sdk/src/* esp-sensors-demo/
-  # replace all #include <iotocnnect*> with quoted include to indicate local file inclusions for Arduino framework
+  mkdir esp-sensors-demo
+  cp src/* include/* lib/iotc-arduino-sdk/include/* lib/iotc-arduino-sdk/src/* esp-sensors-demo/
+  # replace all #include <iotocnnect*> with quoted include to indicate local file inclusions for Arduino framework:
   sed -Ei 's/#include <(iotc[a-z_.]+)>.*/#include "\1"/g' esp-sensors-demo/esp-sensors-demo.cpp
   popd
 fi
