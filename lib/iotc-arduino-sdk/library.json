@@ -1,0 +1,25 @@
+{
+    "name": "iotc-arduino-sdk",
+    "version": "1.0.0",
+    "description": "Avnet IoTConnect SDK for Arduino",
+    "keywords": "IoTConnect, Aure, IoTHub",
+    "repository":
+    {
+      "type": "git",
+      "url": "https://github.com/avnet-iotconnect/iotc-arduino-sdk.git"
+    },
+    "authors":
+    [
+      {
+        "name": "Nikola Marckovic",
+        "email": "nikola.markovic@avnet.com"
+      }
+    ],
+    "license": "MIT",
+    "homepage": "https://github.com/avnet-iotconnect/iotc-arduino-sdk/",
+    "dependencies": {
+      "HTTPClient": "*"
+    },
+    "frameworks": "*",
+    "platforms": "*"
+  }
