@@ -6,8 +6,9 @@ cd $(dirname "$0")
 
 # prevent accidental commits on these files
 # need to undo, if changes to these files are actually needed
-git update-index --assume-unchanged src/include/app_config.h
-git update-index --assume-unchanged src/include/wifi_config.h
+# it doesn't do anything for github actions, but use it for local development
+git update-index --assume-unchanged include/app_config.h || true
+git update-index --assume-unchanged include/wifi_config.h || true
 
 # make packages for Arduino IDE
 if [[ "$1" == "arduino-ide" ]]; then
