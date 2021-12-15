@@ -10,15 +10,28 @@ jobs:
       - uses: actions/checkout@v2
 
       #this doesn't do much for now, but for consistency....
-      - name: Setup Projects
+      - name: Cleanup Residue
         run: |
-          bash -x ./scripts/setup-project.sh
-      - name: Copy Supporting Docs and Licenses
+          rm -rf .git .github
+
+      #prepare PlatformIO project
+      - name: Prepare PlatformIO project
         run: |
-          cp  README.md LICENSE samples/
+          scrips/setup-project.sh
+
+      - name: Publish Artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: iotc-arduino-platformio-sdk
+          path: *
+
+      - name: Prepare Arduino IDE project
+        run: |
+          scrips/setup-project.sh arduino-ide
+
       #use wildcards so that directory path is preserved.
       - name: Publish Artifacts
         uses: actions/upload-artifact@v2
         with:
-          name: iotc-modustoolbox-sdk
-          path: sample*/*
+          name: iotc-arduino-ide-sdk
+          path: esp-sensors-demo*/*
