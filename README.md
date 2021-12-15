@@ -18,8 +18,9 @@ ease of use, and code completion features. Arduino IDE is also supported.
 
 ### PlatformIO
 
-* Download and extract the PlatformIO package from the Releases page into a directory of your choosing.
-* Download and install Microsoft VSCode for your OS.
+* Download and extract the PlatformIO package from the [Releases](https://github.com/avnet-iotconnect/iotc-arduino-sdk/packages)
+page into a directory of your choosing.
+* Download and install Microsoft [Visual Studio Code](https://code.visualstudio.com/download) (VSCode) for your OS.
 * Open VSCode and in the menu navigate to **View -> Extensions**. 
 * Search for *PlatformIO* and install the **Platform IO IDE** extension.
 * Open the PlatformIO plugin in the left sidebar and navigate to **PIO Home -> Open** on the left side panel.
@@ -32,8 +33,9 @@ in order to upload the code to your device and see the device console messages.
   
 ### Arduino IDE
 
-* Download and extract the Arduino ID package from the Releases page into a directory of your choosing.
-* Download and install Arduino IDE for your OS.
+* Download and extract the Arduino ID package from the [Releases](https://github.com/avnet-iotconnect/iotc-arduino-sdk/packages)
+page into a directory of your choosing.
+* Download and install [Arduino IDE](https://www.arduino.cc/en/software) for your OS.
 * Open the file explorer and open esp-sensors-demo.ino file in the directory of the extracted package.
 Alternatively, you can open the IDE and open a new sketch.
 * Using the **Sketch -> Include Library** menu item, 
