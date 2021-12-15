@@ -23,7 +23,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: iotc-arduino-platformio-sdk
-          path: *
+          path: ./*
 
       - name: Prepare Arduino IDE project
         run: |
