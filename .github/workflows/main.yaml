@@ -17,7 +17,7 @@ jobs:
       #prepare PlatformIO project
       - name: Prepare PlatformIO project
         run: |
-          bash -x ./scrips/setup-project.sh
+          bash -x ./scripts/setup-project.sh
 
       - name: Publish Artifacts
         uses: actions/upload-artifact@v2
@@ -27,7 +27,7 @@ jobs:
 
       - name: Prepare Arduino IDE project
         run: |
-          bash -x ./scrips/setup-project.sh arduino-ide
+          bash -x ./scripts/setup-project.sh arduino-ide
 
       #use wildcards so that directory path is preserved.
       - name: Publish Artifacts
