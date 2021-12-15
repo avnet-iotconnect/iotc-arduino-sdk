@@ -17,6 +17,6 @@ if [[ "$1" == "arduino-ide" ]]; then
   cp lib/iotc-arduino-sdk/include/* esp-sensors-demo/
   cp lib/iotc-arduino-sdk/src/* esp-sensors-demo/
   # replace all #include <iotocnnect*> with quoted include to indicate local file inclusions for Arduino framework
-  sed -iE 's/#include <(iotc[a-z_.]+)>.*/#include "\1"/g' esp-sensors-demo/esp-sensors-demo.cpp
+  sed -Ei 's/#include <(iotc[a-z_.]+)>.*/#include "\1"/g' esp-sensors-demo/esp-sensors-demo.cpp
   popd
 fi
