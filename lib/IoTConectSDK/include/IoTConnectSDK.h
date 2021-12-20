@@ -8,6 +8,7 @@
 
 #include <stddef.h>
 #include <time.h>
+#include "iotconnect_common.h"
 #include "iotconnect_event.h"
 #include "iotconnect_telemetry.h"
 #include "iotconnect_lib.h"

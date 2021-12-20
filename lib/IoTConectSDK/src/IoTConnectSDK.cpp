@@ -14,7 +14,7 @@
 #include "iotc_http_request.h"
 #include "iotc_mqtt_client.h"
 #include "iotconnect_certs.h"
-#include "iotconnect.h"
+#include "IoTConnectSDK.h"
 
 #define HTTP_DISCOVERY_URL_FORMAT "https://%s/api/sdk/cpid/%s/lang/M_C/ver/2.0/env/%s"
 #define HTTP_SYNC_URL_FORMAT "https://%s%ssync?"

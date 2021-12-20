@@ -10,7 +10,7 @@
 #include "Arduino.h"
 #include "Client.h"
 #include "iotconnect_discovery.h"
-#include "iotconnect.h"
+#include "IoTConnectSDK.h"
 
 
 typedef void (*IotConnectC2dCallback)(unsigned char* message, size_t message_len);

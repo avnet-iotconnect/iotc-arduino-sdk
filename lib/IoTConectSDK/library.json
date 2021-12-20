@@ -1,5 +1,5 @@
 {
-    "name": "iotc-arduino-sdk",
+    "name": "IoTConnectSDK",
     "version": "1.0.0",
     "description": "Avnet IoTConnect SDK for Arduino",
     "keywords": "IoTConnect, Aure, IoTHub",

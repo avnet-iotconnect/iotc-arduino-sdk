@@ -6,7 +6,7 @@
 #ifndef APP_CONFIG_H
 #define APP_CONFIG_H
 
-#include "iotconnect.h"
+#include "IoTConnectSDK.h"
 
 #define IOTCONNECT_CPID "your-cpid"
 #define IOTCONNECT_ENV  "your-env"

@@ -17,11 +17,7 @@
 #include <ESP.h>
 #include <WiFiClientSecure.h>
 
-// NOTE: IMPORTANT -- Make sure to update setup-project if any additional files need to include  iotconnect* files!
-#include <iotconnect_lib.h>
-#include <iotconnect_telemetry.h>
-#include <iotconnect_common.h>
-#include <iotconnect.h>
+#include <IoTConnectSDK.h>
 #include "wifi_config.h"
 #include "app_config.h"
 
