@@ -33,5 +33,5 @@ jobs:
       - name: Publish Artifacts
         uses: actions/upload-artifact@v2
         with:
-          name: iotc-arduino-ide-sdk
+          name: IoTConnectSDK
           path: arduin-pkg/*
