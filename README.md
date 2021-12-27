@@ -18,7 +18,7 @@ ease of use, and code completion features. Arduino IDE is also supported.
 
 ### PlatformIO
 
-* Clone this repository, or Download and extract the PlatformIO package from the [Releases](https://github.com/avnet-iotconnect/iotc-arduino-sdk/packages)
+* Clone this repository, or Download and extract the PlatformIO package from the [Releases](https://github.com/avnet-iotconnect/iotc-arduino-sdk/releases)
 page into a directory of your choosing.
 * Download and install Microsoft [Visual Studio Code](https://code.visualstudio.com/download) (VSCode) for your OS.
 * Open VSCode and in the menu navigate to **View -> Extensions**. 
@@ -38,6 +38,7 @@ page into a directory of your choosing.
 * Download and install [Arduino IDE](https://www.arduino.cc/en/software) for your OS.
 * Open the file explorer and open esp-sensors-demo.ino file in the examples/esp-sensors-demo directory of the extracted package.
 Alternatively, you can open the IDE and open this sketch by using the **File -> Open** menu option.
+* Ensure that your board is selected under the **Tools -> Board** menu.
 * Select the **Sketch -> Include Library -> Add .ZIP Library** menu item,
 and *Open* the downloaded IoTConnectSDK.ZIP, or the directory where it is extracted. this will install the IoTConnectSDK library. 
 * Using the **Sketch -> Include Library** menu item, install the PubSubClient library.
