@@ -171,14 +171,14 @@ void demo_setup()
   if (wifi_status != WL_CONNECTED) {
       printf("WiFi Connect Status is %d. Waiting for connection..", wifi_status);
   }
-  int connect_tries = 10;
+  int connect_tries = WIFI_CONNECT_TIMEOUT;
   for(; connect_tries > 0 && !WiFi.isConnected(); connect_tries--) {
     printf(".");
     delay(1000);
   }
   
   if (0 == connect_tries) {
-    printf("Failed to connect to WiFi after %d tries\n", wifi_status);
+    printf("Failed to connect to WiFi after %d tries\n", WIFI_CONNECT_TIMEOUT);
     delay(2000);
     ESP.restart();
     while(true) { // never reaches on ESP
