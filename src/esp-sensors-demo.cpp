@@ -171,13 +171,12 @@ void demo_setup()
   if (wifi_status != WL_CONNECTED) {
       printf("WiFi Connect Status is %d. Waiting for connection..", wifi_status);
   }
-  int connect_tries = WIFI_CONNECT_TIMEOUT;
-  for(; connect_tries > 0 && !WiFi.isConnected(); connect_tries--) {
+  for(int connect_tries = WIFI_CONNECT_TIMEOUT; connect_tries > 0 && !WiFi.isConnected(); connect_tries--) {
     printf(".");
     delay(1000);
   }
   
-  if (0 == connect_tries) {
+  if (!WiFi.isConnected()) {
     printf("Failed to connect to WiFi after %d tries\n", WIFI_CONNECT_TIMEOUT);
     delay(2000);
     ESP.restart();
@@ -205,11 +204,10 @@ void demo_setup()
     config->auth_info.data.cert_info.device_key = (char*) IOTCONNECT_DEVICE_KEY;
   }
 
-  for (int i = 0; i < 20; i++)  {
+  for (int ii = 0; ii < 20; ii++)  {
     if (!WiFi.isConnected()) {
       WiFi.reconnect();
-      int connect_tries = 10;
-      for(; connect_tries > 0 && !WiFi.isConnected(); connect_tries--) {
+      for(int connect_tries = 10; connect_tries > 0 && !WiFi.isConnected(); connect_tries--) {
         printf(".");
         delay(1000);
       }
@@ -227,11 +225,11 @@ void demo_setup()
         } else {
           publish_telemetry();
         }
-        // pause 5 second and "loop" frequently
+        // loop for 5 seconds, checking the button state for changes every 100 ms.
         for (int j = 0; j < 50; j++) {
           iotconnect_sdk_loop();
           if (button_state_changed()) {
-            publish_telemetry(); // publish as soon as we detect that button stat changed
+            publish_telemetry(); // publish as soon as we detect that button state changed
           }
           delay(100);
         }

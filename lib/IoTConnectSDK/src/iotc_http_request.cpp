@@ -54,6 +54,7 @@ int iotconnect_https_request(
     //printf("REPONSE>\n%s\n<", payload.c_str());    
     if (NULL == response) {
         printf("iotconnect_https_request() requires a valid IotConnectHttpResponse pointer.");
+        return -4;
     }    
     response->data = (char *) malloc(strlen(payload.c_str()) + 1);
     strcpy(response->data, payload.c_str());
